@@ -6,14 +6,14 @@
 void ShowSum(int number)
 {
     int sum = 0;
-    while (number > 0)
+    int temp = number;
+    while (temp > 0)
     {
-        sum = sum + number%10;
-        number = number / 10;
+        sum = sum + temp % 10;
+        temp = temp / 10;
     }
-    Console.WriteLine($"Сумма цифр равна {sum}");
+    Console.WriteLine($"Сумма цифр числа {number} равна {sum}");
 }
-
 
 int GetInput(string text)
 {
