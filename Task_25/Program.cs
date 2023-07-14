@@ -6,7 +6,12 @@
 
 void RaiseToAPower(int number1, int number2)
 {
-    int number3 = Convert.ToInt32(Math.Pow(number1, number2));
+    int temp = number1;
+    int number3 = number1;
+    for(int count = 1; count < number2; count++) 
+    {
+        number3 = number3 * temp;
+    }
     Console.WriteLine($"Число {number1} в степени {number2} равно {number3}");
 }
 
